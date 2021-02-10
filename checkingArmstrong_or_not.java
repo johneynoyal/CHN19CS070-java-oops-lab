@@ -1,27 +1,39 @@
-import java.io.*;
-import java.util.Scanner;
-import java.lang.Math;
-public class Armstrong {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the number: ");
-        int n = scanner.nextInt();
-        int temp =n;
-        int y =0;
-        String z = Integer.toString(n);
-        int c = (int) z.length();
-        while (temp !=0)
-        {
-            int x = temp%10;
-            y +=(Math.pow(x,c));
-            temp/=10;
-        }
-        if (y==n)
-        {
-            System.out.println("The Number is Armstrong");
-        }
-        else
-        System.out.println("The Number is Not Armstrong");
 
-    }
+
+public class armstrong
+
+{
+
+
+     public static void main(String []args)
+
+     {
+
+         int num= 375,a,rem,b=0;
+
+         a=num;
+
+
+        while(a!= 0)
+
+        {
+
+            rem=a%10;
+
+            b+= Math.pow(rem,3);
+
+            a/= 10;
+
+        }
+
+        if(b==num)
+
+            System.out.println(num + " is an Armstrong number.");
+
+        else
+
+            System.out.println(num + " is not an Armstrong number.");
+
+      }
+
 }
